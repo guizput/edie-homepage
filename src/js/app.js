@@ -1,8 +1,8 @@
-import User from "./User.js";
+import Nav from "./Nav.js";
 
-let guillaume = new User({
-  name: "Guillaume",
-  age: 37,
+let nav = new Nav({
+  toggle: ".nav__toggle",
+  links: ".nav__links",
+  linksActiveClass: "nav__links--active",
+  toggleActiveClass: "nav__toggle--active",
 });
-
-console.log(guillaume);

@@ -1,0 +1,79 @@
+.nav {
+    padding: 1rem 0;
+    position: relative;
+
+    @include breakpoint ('screen-sm') {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__toggle {
+        position: absolute;
+        top: 2rem;
+        right: 0;
+        background-color: transparent;
+        border: none;
+
+        @include breakpoint ('screen-sm') {
+            display: none;
+        }
+
+        span {
+            font-size: 2rem;
+            pointer-events: none;
+        }
+
+        .nav__toggle__close {
+            display: none;
+        }
+
+        &--active {
+            .nav__toggle__menu {
+                display: none;
+            }
+
+            .nav__toggle__close {
+                display: block;
+            }
+        }
+    }
+
+    &__links {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+        max-height: 0;
+        transition: max-height .2s;
+        overflow: hidden;
+
+        @include breakpoint ('screen-sm') {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-gap: 3rem;
+            justify-content: end;
+            max-height: 100%;
+        }
+
+        &--active {
+            max-height: 100%;
+        }
+
+        li {
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 1rem;
+            border-top: 1px solid $x-light;
+
+            @include breakpoint ('screen-sm') {
+                border: none;
+                padding: 1rem 0;
+            }
+
+            a {
+                color: $dark;
+            }
+        }
+    }
+}
