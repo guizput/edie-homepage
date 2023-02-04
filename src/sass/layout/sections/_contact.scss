@@ -1,0 +1,46 @@
+.contact {
+    @include container('md');
+    padding: 0 2rem;
+
+    &__content {
+        width: 100%;
+
+        @include breakpoint ('screen-sm') {
+            max-width: 400px;
+        }
+
+    }
+
+    label {
+        display: block;
+        font-size: .8rem;
+        font-weight: 500;
+        margin-bottom: .5rem;
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: none;
+        position: relative;
+    }
+
+    input[type=email] {
+        padding: 1.5rem 110px 1.5rem 1rem;
+        border: 1px solid $xx-light;
+        background-color: $xx-light;
+        border-radius: $base-radius;
+        font-size: 1rem;
+        font-weight: 500;
+        width: 100%;
+    }
+
+    input[type=submit] {
+        position: absolute;
+        right: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__form {}
+}
