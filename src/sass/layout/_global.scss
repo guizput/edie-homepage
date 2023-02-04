@@ -9,7 +9,12 @@ body {
   min-height: 100%;
 }
 
+.content {
+  @include container('full');
+}
+
 img {
   width: 100%;
   display: block;
+  border-radius: $base-radius;
 }

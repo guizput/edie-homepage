@@ -1,0 +1,22 @@
+$container: 100%;
+$container-lg: 1240px;
+$container-md: 960px;
+
+$sizes: (
+    'full' : $container,
+    'lg' : $container-lg,
+    'md' : $container-md
+);
+
+
+@mixin container($size) {
+    @if map-has-key($sizes, $size) {
+        max-width: map-get($sizes, $size);
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    @else {
+        @warn '`#{$size}` is not a defined size.  Please make sure it is defined in `$sizes` map.';
+    }
+}
