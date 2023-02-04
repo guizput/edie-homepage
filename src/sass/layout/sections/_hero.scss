@@ -1,0 +1,10 @@
+.hero {
+    &__headings {
+        @include container('md');
+        padding: 0 2rem;
+
+        h2 {
+            max-width: 480px;
+        }
+    }
+}

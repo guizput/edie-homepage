@@ -11,6 +11,7 @@ body {
 
 .content {
   @include container('full');
+  padding: 0 1rem;
 }
 
 img {

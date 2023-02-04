@@ -13,7 +13,6 @@ $sizes: (
     @if map-has-key($sizes, $size) {
         max-width: map-get($sizes, $size);
         margin: 0 auto;
-        padding: 0 1rem;
     }
 
     @else {
