@@ -1,0 +1,46 @@
+.services {
+    @include container('lg');
+    padding: 8rem 2rem;
+
+    h3 {
+        margin-bottom: 4rem;
+    }
+
+    &__content {
+        @include breakpoint('screen-sm') {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+}
+
+.service {
+    margin-bottom: 8rem;
+    border-radius: $base-radius;
+    padding: 2rem;
+    max-width: 300px;
+
+    &:hover {
+        @include box;
+    }
+
+    &__icon {
+        border-radius: $base-radius;
+        display: inline-block;
+        padding: 1rem;
+        color: $white;
+
+        &--blue {
+            background-color: $dark-blue;
+        }
+
+        &--green {
+            background-color: $green;
+        }
+
+        &--red {
+            background-color: $red;
+        }
+    }
+}

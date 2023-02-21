@@ -17,11 +17,11 @@
     }
 
     &--secondary {
-        background-color: $light;
+        background-color: $x-light;
         color: $medium;
 
         &:hover {
-            background-color: darken($light, 5%);
+            background-color: darken($x-light, 5%);
         }
     }
 
