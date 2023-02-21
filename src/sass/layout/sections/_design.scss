@@ -1,6 +1,7 @@
 .design {
     @include container('lg');
-    margin: 8rem 2rem;
+    margin: 8rem auto 0 auto;
+    padding: 0 2rem;
 
     h3 {
         max-width: 400px;

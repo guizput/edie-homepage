@@ -1,0 +1,53 @@
+.team {
+    @include container('md');
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8rem;
+
+    @include breakpoint ('screen-sm') {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__copy {
+        @include breakpoint ('screen-sm') {
+            max-width: 300px;
+        }
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    p.red {
+        color: $red;
+        font-weight: 500;
+    }
+
+    &__img {
+        display: grid;
+        grid-template-areas:
+            "img3 img1"
+            "img3 img2";
+        align-items: center;
+        grid-gap: 1rem;
+
+        img {
+            &:nth-child(1) {
+                grid-area: img1;
+                width: 75%;
+            }
+
+            &:nth-child(2) {
+                grid-area: img2;
+                width: 90%;
+            }
+
+            &:nth-child(3) {
+                grid-area: img3;
+                justify-self: flex-start;
+            }
+        }
+    }
+}
