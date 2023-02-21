@@ -1,0 +1,29 @@
+.reviews {
+    @include container('md');
+    margin-bottom: 8rem;
+
+    h3 {
+        max-width: 700px;
+    }
+}
+
+.review {
+    img {
+        max-width: 50px;
+        margin-right: 1rem;
+    }
+
+    &__author {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h5 {
+            margin: 0;
+        }
+
+        small {
+            margin: 0;
+        }
+    }
+}
