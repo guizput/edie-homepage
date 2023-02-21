@@ -1,0 +1,83 @@
+.footer {
+    background-color: $black;
+    color: $white;
+    padding: 4rem 2rem;
+
+    &__content {
+        @include container('md');
+
+        @include breakpoint('screen-sm') {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+
+    &__menu {
+        margin-bottom: 4rem;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    &__links {
+        margin-bottom: 4rem;
+
+        h1 {
+            color: $white;
+            margin: 0;
+        }
+
+        span {
+            font-size: 2rem;
+        }
+    }
+
+    &__form {
+        margin-bottom: 8rem;
+        max-width: 400px;
+
+        label {
+            display: block;
+            font-size: .8rem;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: none;
+            position: relative;
+        }
+
+        input[type=email] {
+            padding: 1.5rem 110px 1.5rem 1rem;
+            border: 1px solid $xx-light;
+            background-color: $xx-light;
+            border-radius: $base-radius;
+            font-size: 1rem;
+            font-weight: 500;
+            width: 100%;
+        }
+
+        input[type=submit] {
+            position: absolute;
+            right: .5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+}
