@@ -1,0 +1,59 @@
+.design {
+    @include container('lg');
+    margin: 8rem 2rem;
+
+    h3 {
+        max-width: 400px;
+        margin-bottom: 8rem;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        margin-bottom: 2rem;
+        max-width: 500px;
+
+        @include breakpoint('screen-sm') {
+            width: 48%;
+            margin-bottom: 8rem;
+
+            &:nth-child(even) {
+                transform: translateY(-25%);
+            }
+        }
+
+        img {
+            margin-bottom: 1rem;
+        }
+
+        h5 {
+            margin: .2rem 0;
+        }
+
+        a {
+            text-align: right;
+            margin-top: 2rem;
+            display: block;
+            position: relative;
+
+            &::after {
+                content: '→';
+                display: inline-block;
+                transform: translate(5px, -2px);
+                transition: transform .2s;
+            }
+
+            &:hover {
+                &::after {
+                    transform: translate(8px, -2px);
+                }
+            }
+        }
+
+    }
+}
